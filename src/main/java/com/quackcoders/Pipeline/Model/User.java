@@ -1,4 +1,4 @@
-package com.quackcoders.Pipeline.Models;
+package com.quackcoders.Pipeline.Model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

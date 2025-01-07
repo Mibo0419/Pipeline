@@ -1,6 +1,6 @@
 package com.quackcoders.Pipeline.Service;
 
-import com.quackcoders.Pipeline.Models.User;
+import com.quackcoders.Pipeline.Model.User;
 import com.quackcoders.Pipeline.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -11,10 +11,10 @@ import java.util.List;
 @Service
 public class UserService {
 
-@Autowired
+    @Autowired
     private UserRepository userRepository;
 
-@Autowired
+    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public User createUser(User user){

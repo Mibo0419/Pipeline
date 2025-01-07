@@ -4,11 +4,13 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.stereotype.Component;
 
 import java.security.Key;
 import java.util.Date;
 import java.util.Map;
 
+@Component
 public class JwtUtil {
     private final String SECRET_KEY = "Woah1This2Is3For4The5Secret6Key7And8Were9Gonna10Have11Random12StuffHere";
 

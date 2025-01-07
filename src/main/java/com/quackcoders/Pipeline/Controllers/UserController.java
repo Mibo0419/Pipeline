@@ -1,6 +1,6 @@
 package com.quackcoders.Pipeline.Controllers;
 
-import com.quackcoders.Pipeline.Models.User;
+import com.quackcoders.Pipeline.Model.User;
 import com.quackcoders.Pipeline.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

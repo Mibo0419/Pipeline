@@ -1,6 +1,6 @@
 package com.quackcoders.Pipeline.Controllers;
 
-import com.quackcoders.Pipeline.Models.User;
+import com.quackcoders.Pipeline.Model.User;
 import com.quackcoders.Pipeline.Security.JwtUtil;
 import com.quackcoders.Pipeline.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,10 +8,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@RestController
 public class AuthenticationController {
 
     @Autowired
