@@ -23,8 +23,8 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http, JwtAuthenticationFilter jwtAuthenticationFilter) throws Exception {
         http.csrf(csrf -> csrf.disable()) // Disable CSRF for simplicity in this project
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/login").permitAll() // Allow login without authentication
-                        .requestMatchers("/register").hasAuthority("MANAGER") // Allow only authenticated users to register
+                        .requestMatchers("/login" ).permitAll() // Allow login without authentication
+//                        .requestMatchers("/register").hasAuthority("MANAGER") // Allow only authenticated users to register
                         .anyRequest().authenticated() // All other endpoints require authentication
                 )
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);

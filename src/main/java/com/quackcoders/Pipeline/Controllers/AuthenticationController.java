@@ -50,11 +50,11 @@ public class AuthenticationController {
         return response;
     }
     @PostMapping("/register")
-    public Map<String, String> register(@RequestBody User registerRequest, @RequestHeader("Authorization")String token) {
-        String role = jwtUtil.extractRole(token.substring(7)); //
-        if (!"MANAGER".equals(role)) {
-            throw new RuntimeException("Only managers can create accounts");
-        }
+    public Map<String, String> register(@RequestBody User registerRequest,  String token) {
+//        String role = jwtUtil.extractRole(token.substring(7));
+//        if (!"MANAGER".equals(role)) {
+//            throw new RuntimeException("Only managers can create accounts");
+//        }
 
         // Check if the email already exists
         if (userService.emailExists(registerRequest.getEmail())) {
