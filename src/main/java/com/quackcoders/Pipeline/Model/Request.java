@@ -30,14 +30,80 @@ public class Request {
 
     private String description;
 
-    public Request(String type) {
-        this();
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
         this.type = type;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public LocalDateTime getSubmittedDate() {
+        return submittedDate;
+    }
+
+    public void setSubmittedDate(LocalDateTime submittedDate) {
+        this.submittedDate = submittedDate;
+    }
+
+    public LocalDateTime getClosedDate() {
+        return closedDate;
+    }
+
+    public void setClosedDate(LocalDateTime closedDate) {
+        this.closedDate = closedDate;
+    }
+
+    public String getTenant() {
+        return tenant;
+    }
+
+    public void setTenant(String tenant) {
+        this.tenant = tenant;
+    }
+
+    public String getAssignee() {
+        return assignee;
+    }
+
+    public void setAssignee(String assignee) {
+        this.assignee = assignee;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Request(String type, String description) {
+        this();
+        this.type = type;
+        this.description = description;
+    }
+    //Lines below will automatically provide date+have status as open
     public Request(){
         this.submittedDate = LocalDateTime.now(); //grabs current time
-        this.status = "In-Progress"; //automatically set status for new request
+        this.status = "Open"; //automatically set status for new request
+
     }
 
     @Override
